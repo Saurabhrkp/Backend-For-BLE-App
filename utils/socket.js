@@ -1,8 +1,13 @@
-const socketIO = require('socket.io');
-const server = require('../bin/www');
+// let io = app.get('io');
+module.exports = io => {
+  io.on('connection', socket => {
+    console.log('New Connection has been made.');
 
-var io = socketIO(server);
+    socket.on('disconnect', () => {
+      console.log('Connection has been disconnected');
+    });
+  });
 
-io.on('connection', socket => {
-  console.log('New user connected');
-});
+  // put any other code that wants to use the io variable
+  // in here
+};
