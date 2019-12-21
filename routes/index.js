@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/data', data_controller.Data_get);
+router.get('/data', data_controller.set_get);
 
-router.post('/data', data_controller.Data_post);
+router.post('/data', data_controller.set_post);
 
 module.exports = router;
