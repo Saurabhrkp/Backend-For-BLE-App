@@ -25,12 +25,12 @@ exports.set_post = function(req, res, next) {
   var set = new Train({
     x_coordinate: req.body.x_coordinate,
     y_coordinate: req.body.y_coordinate,
-    D1: req.body.D1,
-    D2: req.body.D2,
-    D3: req.body.D3,
-    R1: req.body.R1,
-    R2: req.body.R2,
-    R3: req.body.R3
+    at_distance_1: req.body.at_distance_1,
+    at_distance_2: req.body.at_distance_2,
+    at_distance_3: req.body.at_distance_3,
+    rssi_value_1: req.body.rssi_value_1,
+    rssi_value_2: req.body.rssi_value_2,
+    rssi_value_3: req.body.rssi_value_3
   });
   if (!errors.isEmpty()) {
     // There are errors. Render form again with sanitized values/errors messages.
