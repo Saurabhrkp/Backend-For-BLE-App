@@ -1,4 +1,8 @@
 var Device = require('./../models/device');
+const KNN = require('ml-knn');
+const model = require('../test/knn.json');
+
+const knn = KNN.load(model);
 
 exports.post = function(req, res, next) {
   const readings = Object.values(req.body);
@@ -15,11 +19,8 @@ exports.post = function(req, res, next) {
 };
 
 exports.demo = function(req, res, next) {
-  const readings = Object.values(req.body);
-  const result = readings.reduce(
-    (acc, { name, region, rssi }) => ({ ...acc, region, [name]: rssi }),
-    {}
-  );
-  console.log(result);
+  console.log(req.body);
+  var ans = knn.predict(req.body);
+  console.log(ans);
   res.status(200).json('Good!');
 };
