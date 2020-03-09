@@ -5,7 +5,7 @@ var DeviceSchema = new Schema({
   name: { type: String, required: true },
   id: { type: String, required: true, max: 100 },
   region: { type: String, required: true },
-  txpower: { type: String, required: true }
+  rssi: { type: String, required: true }
 });
 
 // Export model.
