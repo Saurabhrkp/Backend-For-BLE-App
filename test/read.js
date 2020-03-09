@@ -4,8 +4,8 @@ const model = require('./knn.json');
 const knn = KNN.load(model);
 
 var dataset = [
-  [0, 0, 0],
-  [2, 2, 2]
+  [-80, -41, -51, -44],
+  [-51, -72, -43, -54]
 ];
 
 var ans = knn.predict(dataset);

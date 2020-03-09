@@ -13,5 +13,5 @@ const net = new brain.NeuralNetwork(config);
 
 const JSON = net.fromJSON(model);
 
-const output = JSON.run({ r: 1, g: 0.4, b: 0 });
+const output = JSON.run({ b1: -80, b2: -41, b3: -51, b4: -44 });
 console.log(output);
