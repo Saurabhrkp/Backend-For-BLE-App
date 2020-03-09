@@ -2,39 +2,83 @@
     "name": "KNN",
     "kdTree": {
         "obj": [
-            1,
-            2,
-            2,
-            1
+            94,
+            0.5148717143151224,
+            16,
+            5
         ],
         "left": {
             "obj": [
-                0,
-                1,
-                1,
-                0
+                40,
+                0.517546804614676,
+                16,
+                2
             ],
             "left": {
                 "obj": [
-                    0,
-                    0,
-                    0,
-                    0
+                    12,
+                    0.5105356367730379,
+                    16,
+                    7
                 ],
-                "left": null,
-                "right": null,
+                "left": {
+                    "obj": [
+                        10,
+                        0.5068958512233102,
+                        16,
+                        1
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
+                "right": {
+                    "obj": [
+                        48,
+                        0.5158030616769878,
+                        16,
+                        2
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
                 "parent": null,
                 "dimension": 2
             },
             "right": {
                 "obj": [
-                    1,
-                    1,
-                    0,
-                    0
+                    12,
+                    0.5323562633463617,
+                    16,
+                    7
                 ],
-                "left": null,
-                "right": null,
+                "left": {
+                    "obj": [
+                        83,
+                        0.5262942735596369,
+                        16,
+                        6
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
+                "right": {
+                    "obj": [
+                        80,
+                        0.5362942735596369,
+                        16,
+                        6
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
                 "parent": null,
                 "dimension": 2
             },
@@ -43,24 +87,79 @@
         },
         "right": {
             "obj": [
-                2,
-                2,
-                2,
-                1
+                99,
+                0.5248717143151224,
+                16,
+                5
             ],
             "left": {
                 "obj": [
-                    2,
-                    1,
-                    2,
-                    1
+                    100,
+                    0.5148717143151224,
+                    16,
+                    5
                 ],
-                "left": null,
-                "right": null,
+                "left": {
+                    "obj": [
+                        98,
+                        0.5148717143151224,
+                        16,
+                        5
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
+                "right": {
+                    "obj": [
+                        98,
+                        0.5214871714315122,
+                        16,
+                        5
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
                 "parent": null,
                 "dimension": 2
             },
-            "right": null,
+            "right": {
+                "obj": [
+                    98,
+                    0.5448717143151224,
+                    16,
+                    5
+                ],
+                "left": {
+                    "obj": [
+                        97,
+                        0.5281527464327415,
+                        16,
+                        5
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
+                "right": {
+                    "obj": [
+                        98,
+                        0.5648717143151224,
+                        16,
+                        5
+                    ],
+                    "left": null,
+                    "right": null,
+                    "parent": null,
+                    "dimension": 3
+                },
+                "parent": null,
+                "dimension": 2
+            },
             "parent": null,
             "dimension": 1
         },
@@ -73,10 +172,13 @@
             3
         ]
     },
-    "k": 3,
+    "k": 6,
     "classes": [
-        0,
-        1
+        1,
+        7,
+        2,
+        6,
+        5
     ],
     "isEuclidean": true
 }
