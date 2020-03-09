@@ -1,0 +1,82 @@
+{
+    "name": "KNN",
+    "kdTree": {
+        "obj": [
+            1,
+            2,
+            2,
+            1
+        ],
+        "left": {
+            "obj": [
+                0,
+                1,
+                1,
+                0
+            ],
+            "left": {
+                "obj": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "left": null,
+                "right": null,
+                "parent": null,
+                "dimension": 2
+            },
+            "right": {
+                "obj": [
+                    1,
+                    1,
+                    0,
+                    0
+                ],
+                "left": null,
+                "right": null,
+                "parent": null,
+                "dimension": 2
+            },
+            "parent": null,
+            "dimension": 1
+        },
+        "right": {
+            "obj": [
+                2,
+                2,
+                2,
+                1
+            ],
+            "left": {
+                "obj": [
+                    2,
+                    1,
+                    2,
+                    1
+                ],
+                "left": null,
+                "right": null,
+                "parent": null,
+                "dimension": 2
+            },
+            "right": null,
+            "parent": null,
+            "dimension": 1
+        },
+        "parent": null,
+        "dimension": 0,
+        "dimensions": [
+            0,
+            1,
+            2,
+            3
+        ]
+    },
+    "k": 3,
+    "classes": [
+        0,
+        1
+    ],
+    "isEuclidean": true
+}
