@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 // Require our controllers.
-var data_controller = require('../controller/dataController');
+const data_controller = require('../controller/dataController');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

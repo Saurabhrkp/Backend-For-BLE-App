@@ -1,20 +1,20 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
 
 // Set up mongoose connection
-var mongoose = require('mongoose');
-var dev_db_url = 'mongodb://localhost:27017/workingSet';
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+const mongoose = require('mongoose');
+const dev_db_url = 'mongodb://localhost:27017/workingSet';
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('connected', console.info.bind(console, 'MongoDB Connected'));
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

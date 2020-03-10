@@ -1,4 +1,4 @@
-var Device = require('./../models/device');
+const Device = require('./../models/device');
 
 const model = require('../test/knn.json');
 const KNN = require('ml-knn');
@@ -35,7 +35,7 @@ exports.post = function(req, res, next) {
 
 exports.demo = function(req, res, next) {
   console.log(req.body);
-  var ans = knn.predict(req.body);
+  const ans = knn.predict(req.body);
   console.log(ans);
   // const output = JSON.run(req.body);
   // console.log(output);
