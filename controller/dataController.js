@@ -31,7 +31,5 @@ exports.demo = function(req, res, next) {
   console.log(reads);
   const ans = knn.predict(reads);
   console.log(ans);
-  // const output = JSON.run(req.body);
-  // console.log(output);
   res.status(200).json(ans);
 };
