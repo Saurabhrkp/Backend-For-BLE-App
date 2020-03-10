@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
 
 const dataset = [
-  [-80, -41, -51, -44],
-  [-51, -72, -43, -54]
+  [-80, -41, -51],
+  [-51, -72, -43]
 ];
 
 const postHandler = () => {

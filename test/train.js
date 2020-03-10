@@ -1,9 +1,7 @@
 const KNN = require('ml-knn');
 const csv = require('csvtojson/v1');
 const prompt = require('prompt');
-let knn;
-const csvFilePath = 'dataset.csv'; // Data
-const names = ['region', 'beacon1', 'beacon2', 'beacon3']; // For header
+const fs = require('fs');
 
 const csvFilePath = 'test.csv'; // Data
 const names = ['beacon1', 'beacon2', 'beacon3', 'region']; // For header
@@ -22,7 +20,7 @@ let trainingSetX = [],
 
 csv({ noheader: true, headers: names })
   .fromFile(csvFilePath)
-  .on('data', jsonObj => {
+  .on('json', jsonObj => {
     data.push(jsonObj); // Push each object to data Array
   })
   .on('done', error => {
@@ -45,7 +43,7 @@ function dressData() {
 
     rowArray = Object.keys(row)
       .map(key => parseFloat(row[key]))
-      .slice(1, 4);
+      .slice(0, 4);
 
     typeNumber = typesArray.indexOf(row.region); // Convert region(String) to region(Number)
 
@@ -62,7 +60,7 @@ function dressData() {
 }
 
 function train() {
-  knn = new KNN(trainingSetX, trainingSetY, { k: 7 });
+  knn = new KNN(trainingSetX, trainingSetY, { k: 4 });
   test();
 }
 
@@ -95,7 +93,7 @@ function predict() {
       for (var key in result) {
         temp.push(parseFloat(result[key]));
       }
-      console.log(`With ${temp} -- region =  ${knn.predict(temp)}`);
+      console.log(`With ${temp}  region =  ${knn.predict(temp)}`);
     }
   });
   storeData(knn, 'trained.json');
@@ -106,7 +104,8 @@ const storeData = (data, path) => {
     fs.writeFileSync(path, JSON.stringify(data));
   } catch (err) {
     console.error(err);
-}
+  }
+};
 
 /**
  * https://stackoverflow.com/a/12646864
