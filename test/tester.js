@@ -5,8 +5,6 @@ const dataset = [
   [-51, -72, -43, -54]
 ];
 
-const dataObject = { b1: -80, b2: -41, b3: -51, b4: -44 };
-
 const postHandler = () => {
   fetch('http://192.168.1.103:3000/demo', {
     method: 'POST',
