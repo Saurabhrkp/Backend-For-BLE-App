@@ -1,7 +1,7 @@
 const Device = require('./../models/device');
 const KNN = require('ml-knn');
 
-const model = require('../test/knn.json');
+const model = require('../test/trained.json');
 const knn = KNN.load(model);
 
 exports.post = function(req, res, next) {
