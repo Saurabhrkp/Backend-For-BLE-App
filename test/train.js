@@ -1,10 +1,14 @@
 const KNN = require('ml-knn');
-const csv = require('csvtojson');
+const csv = require('csvtojson/v1');
 const prompt = require('prompt');
 let knn;
 const csvFilePath = 'dataset.csv'; // Data
 const names = ['region', 'beacon1', 'beacon2', 'beacon3']; // For header
 
+const csvFilePath = 'test.csv'; // Data
+const names = ['beacon1', 'beacon2', 'beacon3', 'region']; // For header
+
+let knn;
 let seperationSize; // To seperate training and test data
 
 let data = [],
