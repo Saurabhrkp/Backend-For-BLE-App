@@ -98,6 +98,14 @@ function predict() {
       console.log(`With ${temp} -- region =  ${knn.predict(temp)}`);
     }
   });
+  storeData(knn, 'trained.json');
+}
+
+const storeData = (data, path) => {
+  try {
+    fs.writeFileSync(path, JSON.stringify(data));
+  } catch (err) {
+    console.error(err);
 }
 
 /**
