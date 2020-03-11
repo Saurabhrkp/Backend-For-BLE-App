@@ -3,7 +3,7 @@ const csv = require('csvtojson/v1');
 const prompt = require('prompt');
 const fs = require('fs');
 
-const csvFilePath = 'test.csv'; // Data
+const csvFilePath = 'college.csv'; // Data
 const names = ['beacon1', 'beacon2', 'beacon3', 'region']; // For header
 
 let knn;
@@ -96,7 +96,7 @@ function predict() {
       console.log(`With ${temp}  region =  ${knn.predict(temp)}`);
     }
   });
-  storeData(knn, 'trained.json');
+  storeData(knn, 'trainedCollege.json');
 }
 
 const storeData = (data, path) => {

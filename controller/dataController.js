@@ -1,7 +1,7 @@
 const Device = require('./../models/device');
 const KNN = require('ml-knn');
 
-const model = require('../test/trained.json');
+const model = require('../test/trainedCollege.json');
 const knn = KNN.load(model);
 
 exports.post = function(req, res, next) {
@@ -10,7 +10,9 @@ exports.post = function(req, res, next) {
     (acc, { name, region, rssi }) => ({ ...acc, region, [name]: rssi }),
     {}
   );
-  const device = new Device(result);
+  const { ' M30s': beacon3, beacon1, beacon2, region } = result;
+  const data = { b1: beacon1, b2: beacon2, b3: beacon3, region: region };
+  const device = new Device(data);
   device.save(function(err, device) {
     if (err) return res.send(err);
     console.log(device);
@@ -25,8 +27,8 @@ exports.demo = function(req, res, next) {
     {}
   );
   console.log(result);
-  const { Redmi6Pro, RedmiNote5, 'Redmi 7': Redmi7 } = result;
-  const data = { b1: RedmiNote5, b2: Redmi6Pro, b3: Redmi7 };
+  const { ' M30s': beacon3, beacon1, beacon2 } = result;
+  const data = { b1: beacon1, b2: beacon2, b3: beacon3 };
   reads = Object.values(data);
   console.log(reads);
   const ans = knn.predict(reads);
