@@ -96,7 +96,7 @@ function predict() {
       console.log(`With ${temp}  region =  ${knn.predict(temp)}`);
     }
   });
-  storeData(knn, 'trainedCollege.json');
+  storeData(knn, 'trainedClass.json');
 }
 
 const storeData = (data, path) => {
